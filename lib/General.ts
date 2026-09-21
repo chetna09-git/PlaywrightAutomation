@@ -28,6 +28,7 @@ export class general extends global{
     async addEmployee() {
         const frame = this.page.frameLocator(this.frame_EmpInfo);
         await frame.locator(this.addButton).click();
+        console.log("Add Employee");
         await frame.locator(this.empFirstName).fill(this.firstName);
         await frame.locator(this.empLastName).fill(this.lastName);
         await frame.locator(this.saveButton).click();
